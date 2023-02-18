@@ -15,8 +15,11 @@ from diffusers import StableDiffusionPanoramaPipeline, DDIMScheduler
 
 model_ckpt = "stabilityai/stable-diffusion-2-base"
 scheduler = DDIMScheduler.from_pretrained(model_ckpt, subfolder="scheduler")
+# pipe = StableDiffusionPanoramaPipeline.from_pretrained(
+#      model_ckpt, scheduler=scheduler, torch_dtype=torch.float16
+# )
 pipe = StableDiffusionPanoramaPipeline.from_pretrained(
-     model_ckpt, scheduler=scheduler, torch_dtype=torch.float16
+     model_ckpt, scheduler=scheduler
 )
 
 pipe = pipe.to(torch.device("cuda" if torch.cuda.is_available() else "cpu"))
