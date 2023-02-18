@@ -124,12 +124,10 @@ css = """
 
 
 examples = [
-    ["Yoda", "low quality", 40],
-    ["A red pokemon with green eyes", 40],
-    ["cute Sundar Pihcai creature", 40],
-    ["Hello kitty", 40],
+    ["a photo of the dolomites", "", 4096],
 ]
 
-num_images_to_gen = 3
+num_images_to_gen = 1
 
-img_height = img_width = 512
+img_height = 512
+img_width = 4096
