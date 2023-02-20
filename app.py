@@ -33,7 +33,12 @@ def generate_image_fn(prompt: str, img_width: int, img_height=512) -> list:
     return image
 
 
-description = "This Space demonstrates MultiDiffusion Text2Panorama using Stable Diffusion model. To get started, either enter a prompt and pick one from the examples below. For details, please visit [the project page](https://multidiffusion.github.io/)."
+description = """This Space demonstrates MultiDiffusion Text2Panorama using Stable Diffusion model. To get started, either enter a prompt and pick one from the examples below. For details, please visit [the project page](https://multidiffusion.github.io/).
+        <p>For faster inference without waiting in queue, you may duplicate the space and upgrade to GPU in settings.
+        <br/>
+        <a href="https://huggingface.co/spaces/weizmannscience/MultiDiffusion?duplicate=true">
+        <img style="margin-top: 0em; margin-bottom: 0em" src="https://bit.ly/3gLdBN6" alt="Duplicate Space"></a>
+        <p/>"""
 article = "This Space leverages a T4 GPU to run the predictions. We use mixed-precision to speed up the inference latency."
 gr.Interface(
     generate_image_fn,
