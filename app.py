@@ -26,7 +26,6 @@ pipe = pipe.to(torch.device("cuda" if torch.cuda.is_available() else "cpu"))
 
 def generate_image_fn(prompt: str, img_width: int, img_height=512) -> list:
     start_time = time.time()
-    prompt = "a photo of the dolomites"
     image = pipe(prompt, height=img_height, width=img_width).images
     end_time = time.time()
     print(f"Time taken: {end_time - start_time} seconds.")
